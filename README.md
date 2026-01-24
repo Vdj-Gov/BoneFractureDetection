@@ -69,7 +69,7 @@ pip install ultralytics==8.1.0
 pip install lapx>=0.5.2
 
 
-## 🚀 Usage
+## Usage
 
 ### Step 1: Data Preprocessing
 Preprocesses X-ray images with normalization, contrast enhancement (CLAHE), and noise reduction:
@@ -118,7 +118,7 @@ python Step06-Ablation.py
 
 **Output**: Ablation results and comparisons saved in `evaluation_output/`
 
-## ⚙️ Configuration Files
+##  Configuration Files
 
 - **`data.yaml`**: Defines dataset paths and class names for original data
   - Train/validation/test splits
@@ -131,7 +131,7 @@ python Step06-Ablation.py
   - Model variants
   - Hyperparameter combinations
 
-## 📊 Dataset Structure
+##  Dataset Structure
 
 The project expects the following dataset structure:
 ```
@@ -147,7 +147,7 @@ dataset/
     └── labels/     # Test annotations
 ```
 
-## 🔧 Technical Details
+##  Technical Details
 
 ### Preprocessing Techniques
 - **Normalization**: Min-max, Z-score, and unit vector normalization
@@ -166,14 +166,14 @@ dataset/
 - **Early Stopping**: Patience of 300 epochs
 - **Validation**: Automatic validation during training
 
-## 📝 Notes
+##  Notes
 
 - **Model Weights**: Pre-trained and trained model weights (`.pt` files) are excluded from git due to size constraints
 - **Dataset**: Original dataset files are excluded. Place your dataset in the `dataset/` directory
 - **Outputs**: Training outputs, predictions, and evaluation results are saved in respective directories
 - **Cache Files**: Label cache files (`.cache`) are automatically generated and excluded from version control
 
-## 🛠️ Dependencies
+##  Dependencies
 
 - Python 3.8
 - PyTorch 2.1.1 (with CUDA 11.8)
@@ -187,15 +187,15 @@ dataset/
 - pandas
 - tqdm
 
-## 📄 License
+##  License
 
 This project is for educational and research purposes.
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📧 Contact
+##  Contact
 
 For questions or issues, please open an issue on the GitHub repository.
 
