@@ -1,0 +1,6 @@
+train: dataset/train/images
+val: dataset/valid/images
+
+# class names
+nc: 1
+names: ["Fracture"]

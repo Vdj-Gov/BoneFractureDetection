@@ -1,0 +1,103 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Model weights and checkpoints
+*.pt
+*.pth
+*.ckpt
+*.weights
+*.h5
+*.pb
+*.onnx
+*.tflite
+
+# Dataset files (usually too large for git)
+dataset/
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.tif
+!**/README*.txt
+!**/README*.md
+
+# Cache files
+*.cache
+*.pkl
+*.pickle
+labels.cache
+
+# Output directories
+output/
+runs/
+evaluation_output/
+preprocessing_output/
+plots/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Data files
+*.csv
+*.json
+*.yaml
+!data.yaml
+!data_preprocessed.yaml
+!ablation_config.yaml
+
+# Large zip files
+*.zip
+*.tar
+*.gz
+*.rar
+
+# Environment variables
+.env
+.env.local
+

@@ -1,0 +1,48 @@
+global:
+  project_dir: runs/ablation
+  data: data.yaml
+  epochs: 200
+  patience: 80
+  batch: 16
+  imgsz: 352
+  device: 0
+  seed: 42
+  save: true
+  exist_ok: true
+
+experiments:
+  - name: baseline_original
+    description: YOLOv8m on raw RGB images using the original dataset
+    model: yolov8m.pt
+
+  - name: preprocessed_inputs
+    description: Same model trained on grayscale preprocessed images
+    model: yolov8m.pt
+    params:
+      data: data_preprocessed.yaml
+
+  - name: small_model
+    description: Quantify impact of model capacity with YOLOv8n
+    model: yolov8n.pt
+
+  - name: high_resolution
+    description: Larger 512px input resolution (smaller batch to fit GPU)
+    model: yolov8m.pt
+    params:
+      imgsz: 512
+      batch: 8
+
+  - name: aggressive_augmentation
+    description: Strong color and geometric augmentations
+    model: yolov8m.pt
+    params:
+      hsv_h: 0.2
+      hsv_s: 0.8
+      hsv_v: 0.8
+      translate: 0.15
+      scale: 0.9
+      shear: 0.2
+      perspective: 0.002
+      mixup: 0.2
+      mosaic: 1.0
+

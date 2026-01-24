@@ -1,0 +1,17 @@
+- Create conda enviroment 
+1. conda create --name YoloV8 python=3.8
+2. conda activate YoloV8
+
+# check Cuda version
+3. nvcc --version
+
+# Cuda 11.8
+4. conda install pytorch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 pytorch-cuda=11.8 -c pytorch -c nvidia
+
+
+# install YoloV8 
+5. pip install ultralytics==8.1.0
+
+6. pip install lapx>=0.5.2
+C:\Users\Varun\Documents\workspace\Bone Fracture Detection\BoneFractureDetection\req.txt
+C:\Users\Varun\Documents\workspace\BoneFractureDetection\BoneFractureDetection\req.txt
