@@ -25,7 +25,7 @@ The project follows a structured 6-step pipeline:
 4. **Step 05 - Evaluation**: Generates confusion matrices and performance metrics
 5. **Step 06 - Ablation Study**: Systematic experiments to optimize model performance
 
-## 📁 Project Structure
+## Project Structure
 
 - `Step01-Preprocess.py` - Data preprocessing script with normalization, contrast enhancement, and noise reduction
 - `Step03-Train.py` - Model training script using YOLOv8 Large architecture
@@ -64,10 +64,10 @@ conda install pytorch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 pytorch-cuda=
 ```
 
 4. Install YOLOv8:
-```bash
+
 pip install ultralytics==8.1.0
 pip install lapx>=0.5.2
-```
+
 
 ## 🚀 Usage
 
