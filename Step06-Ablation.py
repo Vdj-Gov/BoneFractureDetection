@@ -1,11 +1,3 @@
-"""
-Automate ablation studies for the Bone Fracture Detection project.
-
-Usage examples:
-    python Step06-Ablation.py                          # run all experiments
-    python Step06-Ablation.py --only baseline_original # run specific ones
-    python Step06-Ablation.py --skip-existing          # reuse completed runs
-"""
 
 import argparse
 import csv
@@ -16,7 +8,7 @@ from typing import Dict, List, Optional
 
 try:
     import yaml
-except ImportError as exc:  # pragma: no cover - dependency guard
+except ImportError as exc:  
     print("Missing dependency 'pyyaml'. Install it with: pip install pyyaml")
     raise
 
@@ -56,18 +48,18 @@ def resolve_model_path(model_name: str) -> str:
     for candidate in candidates:
         if candidate.exists():
             return str(candidate)
-    return model_name  # allow ultralytics to download official checkpoints
+    return model_name  
 
 
 def resolve_data_path(value: str) -> str:
     path = Path(value)
     if path.is_absolute():
         return str(path)
-    # Try relative to project directory first
+ 
     candidate = BASE_DIR / value
     if candidate.exists():
         return str(candidate)
-    return str(candidate)  # even if missing, YOLO will raise a clearer error
+    return str(candidate)  
 
 
 def read_results_csv(csv_path: Path) -> Optional[Dict[str, str]]:
